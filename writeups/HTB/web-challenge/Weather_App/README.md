@@ -1,4 +1,3 @@
-# README
 Initial methodology to find SQL injection
 -----------------------------------------
 
