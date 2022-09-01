@@ -267,7 +267,7 @@ GET
 The preconfigured request + our payload:
 
 ```text-plain
-GET /data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey} HTTP/1.1
+GET /127.0.0.1/
 Host: 127.0.0.1
 
 POST /register HTTP/1.1
