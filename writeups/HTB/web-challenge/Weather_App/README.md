@@ -76,12 +76,15 @@ async register(user, pass) {
 }
 ```
 
-So, we can use SQL injection and easily extract the flag, but after reading the `/register` function in `challenge/routes/index.js`, the application only accepts user registration when the request comes from `127.0.0.1`. I tried bypassing this control by using these HTTP headers, but seems like the server doesn't get fooled so easily:
+So, we can use SQL injection and easily extract the flag, but after reading the `/register` function in `challenge/routes/index.js`, the application only accepts user registration when the request comes from `127.0.0.1`. 
+
 ```
 if (req.socket.remoteAddress.replace(/^.*:/, '') != '127.0.0.1') {
 		return res.status(401).end();
 }
 ```
+
+I tried bypassing this control by using these HTTP headers, but seems like the server doesn't get fooled so easily:
 
 ![](src/1_image.png)
 
