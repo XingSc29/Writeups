@@ -1,0 +1,101 @@
+{
+	"formatVersion": 1,
+	"appVersion": "0.54.3",
+	"files": [
+		{
+			"isClone": false,
+			"noteId": "FSstQp8jBrQ7",
+			"notePath": [
+				"FSstQp8jBrQ7"
+			],
+			"title": "README",
+			"notePosition": 70,
+			"prefix": null,
+			"isExpanded": true,
+			"type": "text",
+			"mime": "text/html",
+			"attributes": [
+				{
+					"type": "relation",
+					"name": "imageLink",
+					"value": "dnqjy5jQsOph",
+					"isInheritable": false,
+					"position": 1
+				},
+				{
+					"type": "relation",
+					"name": "imageLink",
+					"value": "B8a1PNJDOhtm",
+					"isInheritable": false,
+					"position": 2
+				}
+			],
+			"format": "markdown",
+			"dataFileName": "README.md",
+			"dirFileName": "README",
+			"children": [
+				{
+					"isClone": false,
+					"noteId": "yXByMnkKkIfb",
+					"notePath": [
+						"FSstQp8jBrQ7",
+						"yXByMnkKkIfb"
+					],
+					"title": "PoC.py",
+					"notePosition": 20,
+					"isExpanded": false,
+					"type": "code",
+					"mime": "text/x-python",
+					"attributes": [],
+					"dataFileName": "PoC.py"
+				},
+				{
+					"isClone": false,
+					"noteId": "dnqjy5jQsOph",
+					"notePath": [
+						"FSstQp8jBrQ7",
+						"dnqjy5jQsOph"
+					],
+					"title": "image.png",
+					"notePosition": 30,
+					"isExpanded": false,
+					"type": "image",
+					"mime": "image/jpg",
+					"attributes": [
+						{
+							"type": "label",
+							"name": "originalFileName",
+							"value": "image.png",
+							"isInheritable": false,
+							"position": 1000
+						}
+					],
+					"dataFileName": "image.png"
+				},
+				{
+					"isClone": false,
+					"noteId": "B8a1PNJDOhtm",
+					"notePath": [
+						"FSstQp8jBrQ7",
+						"B8a1PNJDOhtm"
+					],
+					"title": "image.png",
+					"notePosition": 40,
+					"isExpanded": false,
+					"type": "image",
+					"mime": "image/png",
+					"attributes": [
+						{
+							"type": "label",
+							"name": "originalFileName",
+							"value": "image.png",
+							"isInheritable": false,
+							"position": 1000
+						}
+					],
+					"dataFileName": "1_image.png"
+				}
+			]
+		}
+	]
+}
