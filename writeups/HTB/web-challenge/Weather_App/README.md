@@ -58,7 +58,7 @@ async migrate() {
 
 At this point, I was thinking to brute force the password because I didn't know what does `crypto.randomBytes(32).toString('hex')` create. After running the function, I quickly gave up:
 
-![](README/image.png)
+![](src/image.png)
 
 Since the application is interacting with database, so I am looking for SQL injection now, the `isAdmin()` function uses parameterized SQL query, but the `register` function doesn't:
 
@@ -77,8 +77,13 @@ async register(user, pass) {
 ```
 
 So, we can use SQL injection and easily extract the flag, but after reading the `/register` function in `challenge/routes/index.js`, the application only accepts user registration when the request comes from `127.0.0.1`. I tried bypassing this control by using these HTTP headers, but seems like the server doesn't get fooled so easily:
+```
+if (req.socket.remoteAddress.replace(/^.*:/, '') != '127.0.0.1') {
+		return res.status(401).end();
+}
+```
 
-![](README/1_image.png)
+![](src/1_image.png)
 
 Perhaps SSRF?
 
