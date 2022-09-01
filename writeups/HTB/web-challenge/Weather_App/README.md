@@ -281,7 +281,7 @@ GET /data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey} HTTP/1.1
 Host: 127.0.0.1
 ```
 
-You might find the first line lacks of "HTTP/1.1", but both will work after tesdting. I used Python to send this request:
+You might find the first line lacks of "HTTP/1.1", but both will work after testing. I used Python to send this request:
 
 ```text-plain
 import requests
