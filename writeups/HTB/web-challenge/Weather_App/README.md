@@ -3,7 +3,7 @@ Initial methodology to find SQL injection
 
 Downloaded the provided file. By viewing `index.js` in the `challenge` folder, we can know that there is a database called `weather.db` being initialized.
 
-The next file to look at is `challenge/routes/index.js`, we have `/register` (GET&POST), `/login` (GET&POST), `/api/weather` (POST). 
+The next file to look at is `challenge/routes/index.js` because this file determines which URL path we have access to and their functions. We have `/register` (GET&POST), `/login` (GET&POST), `/api/weather` (POST). 
 
 The `/login`'s POST function shows this:
 
