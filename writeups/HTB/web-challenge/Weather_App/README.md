@@ -1,3 +1,8 @@
+## Challenge description
+Weather App is an above-intermediate difficulty web challenge. This web challenge involves SQL injection and advanced SSRF vulnerabilities. 
+
+When you browse the web app, it won't show any links/buttons or routes, so the provided source code files are necessary for us to explore the web app. This write up expects you to have the web app source code files downloaded from HTB.
+
 Initial methodology to find SQL injection
 -----------------------------------------
 
