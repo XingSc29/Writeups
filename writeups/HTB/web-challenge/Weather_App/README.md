@@ -118,7 +118,7 @@ By reading that function, we know that it basically uses another function (`Http
 let weatherData = await HttpHelper.HttpGet(`http://${endpoint}/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}`);
 ```
 
-At this point, I was thinking to inject stuff like [`http://127.0.0.1/register#`](http://127.0.0.1/register#) to complete the SSRF attack because `#` will make everything behind become an URL fragment. However, we need to submit POST request to register. This makes everything difficult because it involves advanced SSRF attacks (don't know why HTB rates this as an easy challenge).
+At this point, I was thinking to inject stuff like [`http://127.0.0.1/register#`](http://127.0.0.1/register#) as the `endpoint` to complete the SSRF attack because `#` will make everything behind become an URL fragment. However, we need to submit POST request to register. This makes everything difficult because it involves advanced SSRF attacks (don't know why HTB rates this as an easy challenge).
 
 Potential vulnerabilities
 -------------------------
