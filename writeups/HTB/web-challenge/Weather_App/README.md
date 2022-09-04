@@ -1,14 +1,14 @@
 ## Challenge description
 Weather App is an above-intermediate difficulty web challenge. This web challenge involves SQL injection and advanced SSRF vulnerabilities. 
 
-When you browse the web app, it won't show any links/buttons or routes, so the provided source code files are necessary for us to explore the web app. This write up expects you to have the web app source code files downloaded from HTB.
+When you browse the web app, it won't show any links/buttons or routes, so the provided source code files are necessary for you to explore the web app. This write up expects you to have the web app source code files downloaded from HTB already.
 
 Initial methodology to find SQL injection
 -----------------------------------------
 
-Downloaded the provided file. By viewing `index.js` in the `challenge` folder, we can know that there is a database called `weather.db` being initialized.
+After downloading the provided file and viewing `index.js` in the `challenge` folder (this is the first file to look at as it will be run automatically when the web app is initialized), we can know that there is a database called `weather.db` being initialized. 
 
-The next file to look at is `challenge/routes/index.js` because this file determines which URL path we have access to and their functions. We have `/register` (GET&POST), `/login` (GET&POST), `/api/weather` (POST). 
+The next file to look at is `challenge/routes/index.js` because this file determines which URL path we have access to and their corresponding functions. We have `/register` (GET&POST), `/login` (GET&POST), `/api/weather` (POST). 
 
 The `/login`'s POST function shows this:
 
