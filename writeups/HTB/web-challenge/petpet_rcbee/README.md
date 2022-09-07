@@ -3,13 +3,6 @@ Challenge description
 
 This challenge involves exploiting CVE-2017-8291 / CVE-2018-16509 (GhostButt) on `ghostscript`. 
 
-GhostButt
----------
-
-`Ghostscript` is a software pre-installed in many production servers (e.g. `/usr/local/bin/gs`) even if no application uses it because it is a dependency of many image software. 
-
-This is a sample `gs` command: `gs -q -g100x100 -r72.000000x72.000000 -dBATCH -dNOPAUSE -dSAFER -sDEVICE=ppmraw -sOutputFile=/tmp/tmpi8gqd19k -c 0 0 translate -f ../poc.png` (used by Python `PIL`). In this command, it uses `-dSAFER` which disallows behaviors like file deletion, rename and command execution. However, CVE-2017-8291 is the bypass of `dSAFER`. 
-
 Web application description
 ---------------------------
 
@@ -29,6 +22,13 @@ When searching exploits for `Ghostscript`, there are a lot of it. One example is
 ![](src/2_image.png)
 
 `metasploit` even told us that it can be exploited through libraries such as `Pillow`. However, it only works for `Ghostscript` versions 9.21 and earlier. After doing some research, it seems like there is a new exploit (CVE-2018-16509) which works for versions 9.23 and earlier. 
+
+GhostButt
+---------
+
+`Ghostscript` is a software pre-installed in many production servers (e.g. `/usr/local/bin/gs`) even if no application uses it because it is a dependency of many image software. 
+
+This is a sample `gs` command: `gs -q -g100x100 -r72.000000x72.000000 -dBATCH -dNOPAUSE -dSAFER -sDEVICE=ppmraw -sOutputFile=/tmp/tmpi8gqd19k -c 0 0 translate -f ../poc.png` (used by Python `PIL`). In this command, it uses `-dSAFER` which disallows behaviors like file deletion, rename and command execution. However, CVE-2017-8291 is the bypass of `dSAFER`. 
 
 `PIL` and `Ghostscript`
 -----------------------
